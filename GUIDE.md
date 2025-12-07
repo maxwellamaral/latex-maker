@@ -341,14 +341,6 @@ latexmk -xelatex -pdf main.tex
 - Use `\includeonly{}` quando trabalhar em capítulos grandes para acelerar builds.
 - Configure o LaTeX Workshop (VS Code) para `xelatex`/`lualatex` e `latexmk` como _recipe_.
 
----
-
-Terminamos o tutorial básico. Se quiser, posso:
-- (1) criar um projeto exemplo com essa estrutura (com `main.tex`, `chapters/`, `bib/`, `figures/`),
-- (2) adicionar um `cheatsheet.md` com comandos LaTeX rápidos, ou
-- (3) gerar um script `scripts/init-project.ps1` para criar um template pronto. 
-Diga qual ação prefere e eu implemento.
-
 Veja também: `CHEATSHEET.md` — referência rápida com os comandos e snippets mais usados em LaTeX.
 
 ### Clean scripts

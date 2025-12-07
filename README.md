@@ -254,5 +254,3 @@ Observação: o comportamento exato de limpeza pode variar de acordo com arquivo
 
 Veja também: `GUIDE.md` — guia detalhado com organização, build, CI e boas práticas.
 Veja também: `CHEATSHEET.md` — referência rápida com snippets e comandos úteis.
-
-Diga o que prefere e eu faço os próximos ajustes.
