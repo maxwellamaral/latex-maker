@@ -31,11 +31,13 @@ function Remove-Patterns {
         foreach ($f in $matches) {
             if ($whatIf) {
                 Write-Host "Would remove: $($f.FullName)"
-            } else {
+            }
+            else {
                 try {
                     Remove-Item -Path $f.FullName -Force -ErrorAction Stop
                     Write-Host "Removed: $($f.FullName)"
-                } catch {
+                }
+                catch {
                     Write-Warning "Failed to remove $($f.FullName): $_"
                 }
             }
@@ -51,7 +53,8 @@ if ($latexmkExists) {
         & latexmk -C
         if ($LASTEXITCODE -eq 0) { Write-Host "latexmk -C completed." }
         else { Write-Warning "latexmk -C returned code $LASTEXITCODE" }
-    } else {
+    }
+    else {
         Write-Host "Running 'latexmk -c' (light clean)"
         & latexmk -c
         if ($LASTEXITCODE -eq 0) { Write-Host "latexmk -c completed." }
@@ -61,7 +64,7 @@ if ($latexmkExists) {
 }
 
 # Known extensions and files to remove
-$lightPatterns = @("*.aux","*.log","*.out","*.toc","*.lof","*.lot","*.lol","*.fls","*.fdb_latexmk","*.synctex.gz","*.bbl","*.blg","*.run.xml","*.nav","*.snm","*.vrb","missfont.log")
+$lightPatterns = @("*.aux", "*.log", "*.out", "*.toc", "*.lof", "*.lot", "*.lol", "*.fls", "*.fdb_latexmk", "*.synctex.gz", "*.bbl", "*.blg", "*.run.xml", "*.nav", "*.snm", "*.vrb", "missfont.log")
 $fullPatterns = @("*.pdf")
 
 # Prepare deletion list
