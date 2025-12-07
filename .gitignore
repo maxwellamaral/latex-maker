@@ -1,0 +1,26 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+*.synctex.gz
+*.pdf # optional: keep commented if you want to track final PDFs
+
+# macOS
+.DS_Store
+
+# Editor backup
+*~
+*.swp
+.vscode/
+
+# Misc
+missfont.log

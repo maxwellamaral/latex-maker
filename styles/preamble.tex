@@ -1,0 +1,49 @@
+% Preamble extraido de exemplo.tex
+\documentclass[12pt, a4paper, twoside]{article}
+
+% Pacotes e configurações
+% \usepackage[utf8]{inputenc} % somente se usando pdflatex
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[portuguese]{babel}
+\usepackage{multicol}
+
+% Estilos
+\usepackage[margin=2.5cm]{geometry}
+% Espaço entre parágrafos
+\setlength{\parskip}{1em}
+% Remover recuos do primeiiro parágrafo
+\setlength{\parindent}{0pt}
+% Espaço entre linhas
+\onehalfspacing 
+%\doublespacing
+% Sem espaçamento entre listas
+\setlist{nosep}
+% Espaçamento à SECTION
+% Argumentos: {comando}{espaço antes}{espaço depois}{recuo}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+% Definindo as fontes do sistema
+\setmainfont{Times New Roman}
+% \setsansfont{Arial}
+% Configuração de fonte monoespaçada com fallback
+% Se Inconsolata não estiver instalada no sistema, usa Consolas (comum no Windows)
+\IfFontExistsTF{Inconsolata}{
+    \setmonofont{Inconsolata}
+}{
+    \setmonofont{Consolas}
+}
+
+% Document metadata
+\title{Meu primeiro artigo em LaTeX}
+\author{Maxwell Anderson}
+\date{\today}
+
+% Graphics path (adicionar subdiretório "figures/")
+\graphicspath{{figures/}}

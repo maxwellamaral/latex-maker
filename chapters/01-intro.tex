@@ -1,0 +1,149 @@
+% Conteúdo do capítulo Introdução extraido de exemplo.tex
+
+
+\section{Introdução}
+\label{sec:intro}
+
+Olá, mundo! Esta é a nossa primeira frase em LaTeX.
+É um sistema de composição, não um processador de texto.
+
+% Espaçamento temporário
+\vspace{2cm}
+Observe que, mesmo que eu use várias linhas no código, o texto final será um único parágrafo, a menos que eu insira um parágrafo em branco para separação.
+
+\begin{multicols}{2} % Inicia o ambiente de 2 colunas
+
+Este é o texto da primeira coluna. O LaTeX preencherá a primeira coluna e, em seguida, continuará automaticamente na segunda coluna.
+Este ambiente é ideal para resumos, descrições longas de figuras ou qualquer conteúdo que precise de um layout mais denso.
+
+\columnbreak % Comando opcional para forçar a quebra para a próxima coluna, se necessário.
+
+A segunda coluna começa aqui. Se você não usar o \columnbreak, o LaTeX tentará equilibrar o texto automaticamente entre as duas colunas. Note que, após este ambiente, o layout do documento retorna ao padrão de coluna única.
+
+\end{multicols}
+
+\begin{equation}
+    y = f(x)+ c
+    \label{eq:simples}
+    \tag{Loss}
+\end{equation}
+
+Conforme demonstrado na Equação \ref{eq:simples}, a função...
+
+Abaixo, segue um exemplo de uso de equação sem numeração:
+
+\begin{equation*}
+    y = f(x)+ c
+\end{equation*}
+
+
+Este é um \textbf{termo importante}
+
+Este é um \textit{termo em latim}
+
+\emph{A ênfase} pode ser itálico ou negrito, dependendo do contexto.
+
+
+Esta seção define o escopo do trabalho. É \textbf{fundamental} que a estrutura do documento seja organizada.
+
+\subsection{Definições chave}
+
+Este é um termo \textit{crucial} para o nosso estudo.
+
+\subsubsection{Lista de exemplos}
+
+Podemos usar listas ordenadas e não ordenadas:
+
+\begin{itemize}
+    \item Item com marcador simples
+    \item Outro item com marcador
+    \item Para um novo parágrafo, use uma linha em branco.
+\end{itemize}
+
+\begin{enumerate}
+    \item Primeiro ponto numerado.
+    \item Segundo ponto, que é \emph{importante}.
+\end{enumerate}
+
+A solução para a equação quadrática é dada por:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+\label{eq:quadratica}
+
+Onde $a$, $b$, e $c$ são os coeficientes da função.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/inovacao.jpeg}
+    \caption{Exemplo de figura}
+    \label{fig:grafico}
+\end{figure}
+
+Exemplo de tabela:
+
+
+\begin{tabular}{|l|c|r|}
+    \hline 
+    Nome & Idade & Cidade \\
+    \hline 
+    Alice & 30 & Porto \\
+    \hline
+\end{tabular}
+
+O conceito de relatividade foi explorado por \cite{Einstein1905}
+
+O conceito de relatividade foi explorado por \citep{Einstein1905} (Citação parentética)
+
+O conceito de relatividade foi explorado por \citet{Einstein1905} (Citação narrativa)
+
+
+\section{Fundamentação Teórica}
+\label{sec:teoria}
+
+O resultado do cálculo (veja a Equação \ref{eq:pitagoras})
+
+$$
+a^2+b^2=c^2
+$$
+\label{eq:pitagoras}
+
+Conforme detalhado na seção \ref{sec:teoria}, localizada na página \pageref{sec:teoria}...
+
+Uma lista com estilos específicos:
+\begin{enumerate}[label=\alph*., itemsep=0.5em] 
+    \item Item 1
+    \item Item 2
+\end{enumerate}
+
+Código simples em Python:
+
+% Para códigos-fonte
+\begin{verbatim}
+    def hello(text):
+        print(f'Hello {text}!')
+\end{verbatim}
+
+Código em Python com formatação:
+
+\begin{lstlisting}[
+    language=Python, 
+    numbers=left, 
+    basicstyle=\ttfamily\small,
+    caption={Algoritmo de Fibonacci},
+    label={lst:fatorial}
+    ]
+def fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+# Este código terá numeração e destaque de Python.
+\end{lstlisting}
+
+O algoritmo para o cálculo do fatorial é detalhado no Listagem \ref{lst:fatorial}.
+
+\bibliographystyle{plainnat}
+\bibliography{bib/referencias}
+
